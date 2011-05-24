@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>jQuery Mobile | Simple page</title>
+<link rel="stylesheet" type="text/css" media="all" href="jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.css" />
+<script src="jquery-1.5.2.js"> </script>
+<script src="jquery.mobile-1.0a4.1/jquery.mobile-1.0a4.1.js"> </script>
+</head>
+<body>
+
+
+
+
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>Page header</h1>
+	</div>
+
+	<div data-role="content">
+		<h3>Hi!</h3>
+    <p>This is a simple page made with jquery mobile</p>
+    <p id="tapMe">TAP HERE</p>
+    <p id="tapholdMe">TAP AND HOLD HERE</p>
+	</div>
+
+</div>
+
+<script>
+
+  $(document).ready(function() {
+    
+    $('#tapMe').tap(function(e) {
+      alert('tap!' );
+    });
+
+    $('#tapholdMe').taphold(function(e) {
+      alert('tap hold!' );
+    });
+
+    $('#home').swipeleft(function(e) {
+      alert('swipe left!' );
+    });
+
+    $('#home').swiperight(function(e) {
+      alert('swipe right!' );
+    });
+    
+  });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>jQuery Mobile | CSS transitions</title>
+<script src="jquery-1.5.2.js"> </script>
+
+<style>
+
+  #surface {
+    margin-left: 130px;
+    margin-top: 80px;
+    padding-top: 100px;
+    width: 700px;
+    height: 800px;
+    background: #B6E677;
+    font-size: 50px;
+    font-family: Arial;
+    text-align: center;
+  }
+
+
+
+  .flip {
+  	-webkit-animation-name: flipinfromleft;
+  	-webkit-animation-timing-function: ease-in-out;
+  	-webkit-animation-duration: 2s;
+  }
+
+  @-webkit-keyframes flipinfromleft {
+      from { -webkit-transform: rotateY(180deg); }
+      to { -webkit-transform: rotateY(0); }
+  }
+
+
+</style>
+
+
+
+<script>
+
+  $(document).ready(function() {
+    
+    $('#surface').click(function(e) {
+      $(this).addClass('flip');
+    });
+    
+  });
+
+</script>
+
+</head>
+
+
+
+
+<body>
+
+
+  <div id="surface">
+    Klicka på mig för att rotera!
+  <div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
